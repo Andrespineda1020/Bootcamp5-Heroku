@@ -32,5 +32,7 @@ module.exports.init = function() {
   /**TODO
   Go to homepage for all routes not specified */
   // app.use('/*', express.static(path.join(__dirname, 'client')))
+  app.get('/{}', (req, res) => {
+  res.sendFile('index.html');
   return app;
 };
